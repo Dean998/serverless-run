@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  deploy_lambda:
+  deploy_lambda_function:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -15,5 +15,6 @@ jobs:
           node-version: "12"
       - name: npm install
         run: npm ci
-      - name: deploy_code
-        run: echo "Deploying code..."
+      - name: deploy
+        run: |
+        # build /w ncc
