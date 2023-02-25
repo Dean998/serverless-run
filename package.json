@@ -1,0 +1,28 @@
+{
+  "name": "serverless-run",
+  "version": "1.0.0",
+  "description": "Trying out serverless with aws",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dean998/serverless-run.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dean998/serverless-run/issues"
+  },
+  "homepage": "https://github.com/Dean998/serverless-run#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.111",
+    "@types/lodash": "^4.14.191",
+    "@types/node": "^18.14.1",
+    "@vercel/ncc": "^0.36.1"
+  }
+}
