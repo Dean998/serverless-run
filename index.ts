@@ -10,7 +10,7 @@ export const handler: Handler = async (event: APIGatewayProxyEvent) => {
   const val = _.random(max);
   const response = {
     statusCode: 200,
-    body: `The random value of ${max} is : ${val} `,
+    body: `The random value of ${max} is : ${val} + i am working :)`,
   };
   return response;
 };
