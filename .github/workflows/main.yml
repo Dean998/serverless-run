@@ -20,7 +20,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-2
       - name: npm install
-        run: npm ci --production
+        run: npm ci
       - name: deploy
         run: |
           npx ncc build index.ts 
