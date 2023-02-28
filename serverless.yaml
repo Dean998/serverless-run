@@ -1,7 +1,11 @@
 service: my-service
+useDotenv: true
+
 provider:
   name: aws
   runtime: nodejs18.x
+  environment:
+    OPENAI_API_KEY: ${env:OPENAI_API_KEY}
 
 functions:
   hello:
@@ -11,12 +15,32 @@ functions:
           path: hello
           method: get
 
+  random:
+    handler: dist/handler.random
+    events:
+      - http:
+          path: random
+          method: get
+
   openai:
-    handler: dist/handler.openai
+    handler: dist/handler.openAi
     events:
       - http:
           path: openai
           method: get
 
+  openai-image:
+    handler: dist/handler.openAiImageGenerator
+    timeout: 20
+    events:
+      - http:
+          path: openai-image
+          method: get
+
 plugins:
+  - serverless-dotenv-plugin
   - serverless-offline
+
+custom:
+  serverless-offline:
+    timeout: 20
