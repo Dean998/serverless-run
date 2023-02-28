@@ -1,0 +1,22 @@
+service: my-service
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  hello:
+    handler: dist/handler.hello
+    events:
+      - http:
+          path: hello
+          method: get
+
+  openai:
+    handler: dist/handler.openai
+    events:
+      - http:
+          path: openai
+          method: get
+
+plugins:
+  - serverless-offline
