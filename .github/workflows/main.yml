@@ -21,6 +21,8 @@ jobs:
           aws-region: us-east-2
       - name: npm install
         run: npm ci
+      - name: Build TypeScript
+        run: npm run build
       - name: Serverless deploy
         run: |
           npm install -g serverless
