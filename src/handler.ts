@@ -1,6 +1,5 @@
 import axios, { AxiosRequestConfig } from "axios";
 import { APIGatewayProxyEvent, APIGatewayProxyResult } from "aws-lambda";
-require("dotenv").config();
 
 export const hello = async (
   event: APIGatewayProxyEvent
