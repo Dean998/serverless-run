@@ -33,18 +33,19 @@ To deploy the app, make sure you have the Serverless Framework installed. You ca
 ```bash
 npm install -g serverless
 ```
-
-Then, deploy the app to your AWS account with the following command:
-
-```bash
-serverless deploy
-```
-
 To run serverless offline , run command: 
 
 ```bash
 sls offline start
 ```
+
+You can deploy the app to your AWS account with the following command:
+
+```bash
+serverless deploy
+```
+
+
 
 ## OpenAI Image Generator
 This app integrates with the OpenAI Image Generator through the `openAiImageGenerator` function in the handler.ts file. This function sends a POST request to the OpenAI API to generate an image based on a prompt.
