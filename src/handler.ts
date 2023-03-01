@@ -56,6 +56,10 @@ export const openAi = async (
 export const openAiImageGenerator = async (
   event: APIGatewayProxyEvent
 ): Promise<APIGatewayProxyResult> => {
+  // Think of any image you would like to see and enter here into prompt as a string
+  const prompt = "a blue bear with a bowl of white rice ";
+
+  console.log(prompt);
   try {
     const config: AxiosRequestConfig = {
       headers: {
@@ -65,10 +69,11 @@ export const openAiImageGenerator = async (
     };
 
     const data = {
-      prompt: "A potato flying in the air with wings",
+      prompt: prompt,
       n: 1,
       size: "1024x1024",
     };
+
     const response = await axios.post(
       "https://api.openai.com/v1/images/generations",
       data,
